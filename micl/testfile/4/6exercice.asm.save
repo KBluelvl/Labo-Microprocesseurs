@@ -1,0 +1,3 @@
+;Ecrivez un code source complet qui déclare trois variables dont deux sot
+;constantes et explicitement initialis´ees mais pas la troisi`eme. Le contenu de cette derni`ere
+;est calcul´e. Il est ´egal au minimum des deux autres.

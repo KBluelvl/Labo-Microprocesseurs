@@ -1,0 +1,25 @@
+global _start
+
+section .text
+_start:
+
+push rbp
+mov rsp, rbp
+
+mov rax, 0x78624565789865
+push rax
+
+mov rdi, 86
+
+;rdi -> pair ou impair
+bt rdi, 0
+jc impair
+
+;pair
+bts qword[rbp], 0
+jmp suite
+
+impair:
+btr qword[rbp], 0
+suite:
+

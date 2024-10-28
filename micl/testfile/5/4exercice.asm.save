@@ -1,0 +1,33 @@
+global _start
+
+section .data
+resultat	DB	0
+
+section .text
+_start:
+
+;read
+mov rax, 0
+mov rdi, 0
+mov rsi, rcx
+mov rdx, 1
+syscall
+
+bt rcx, 0
+jc impair
+
+;pair - write
+mov resultat, 
+mov rax, 1
+mov rdi, 1
+mov rsi, resultat
+mov rdx, 4
+syscall
+
+
+impair:
+
+fin:
+mov rax, 60
+mov rdi, 0
+syscall
